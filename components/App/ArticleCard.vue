@@ -11,7 +11,7 @@
             class="h-4 w-0.5 rounded-full bg-gray-200 dark:bg-gray-500"
           ></span
         ></span>
-        {{ getReadableDate(article.published) }}
+        {{ currentDate(article.published) }}
       </time>
       <h2
         class="text-base font-semibold font-display tracking-tight text-gray-800 dark:text-gray-100 group-hover:text-primary-600"
@@ -35,6 +35,15 @@ defineProps({
 
 const getReadableDate = (dateString) => {
   const date = new Date(dateString);
+  return date.toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "short",
+    day: "numeric",
+  });
+};
+
+const currentDate= () => {
+  const date = new Date();
   return date.toLocaleDateString("en-US", {
     year: "numeric",
     month: "short",

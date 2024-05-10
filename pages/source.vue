@@ -1,0 +1,120 @@
+
+<template>
+      <main class="min-h-screen">
+            <AppHeader class="mb-8" title="Cybersecurity" :description="description" />
+            <!-- <iframe
+                  src="https://onedrive.live.com/embed?resid=1ABE3D24809C75C4%211900&amp;authkey=%21ABOCc9ln-jE7EmY&amp;em=2&amp;wdAr=1.7777777777777777&amp;wdEaa=0"
+                  width="476px" height="293px" frameborder="0">This is an embedded <a target="_blank"
+                        href="https://office.com">Microsoft Office</a> presentation, powered by <a target="_blank"
+                        href="https://office.com/webapps">Office</a>.</iframe> -->
+           
+           
+           
+                        <div class="space-y-2">
+      <HomeShowSource />
+    </div>
+       
+      </main>
+</template>
+    
+<script setup>
+const description =
+      "Awesome things I've found on the internet. This page is still WIP, I want to add search like bmrks.com";
+useSeoMeta({
+      title: "Cyber Security | Muhammad Farhan",
+      description,
+});
+
+const bookmarks = [
+      {
+            id: 1,
+            label: "Adam Wathan - Tailwind CSS Best Practice Patterns",
+            url: "https://www.youtube.com/watch?v=J_7_mnFSLDg",
+      },
+      {
+            id: 2,
+            label: "Dicebear Awesome avatars",
+            url: "https://www.dicebear.com/",
+      },
+      {
+            id: 3,
+            label: "Circuit design stock image",
+            url: "https://images.unsplash.com/photo-1592659762303-90081d34b277?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2873&q=80",
+      },
+      {
+            id: 4,
+            label: "Beautiful Gradient Generator",
+            url: "https://www.joshwcomeau.com/gradient-generator/",
+      },
+      {
+            id: 5,
+            label: "3D device mockups",
+            url: "https://deviceframes.com/",
+      },
+      {
+            id: 6,
+            label: "Box shadow examples",
+            url: "https://getcssscan.com/css-box-shadow-examples",
+      },
+      {
+            id: 7,
+            label: "Octupos Illustration",
+            url: "https://refine.new/",
+      },
+      {
+            id: 8,
+            label: "Metalab agency",
+            url: "https://www.metalab.com/",
+      },
+      {
+            id: 9,
+            label: "Tines - Beautiful landing page",
+            url: "https://www.tines.com/product",
+      },
+      {
+            id: 10,
+            label: "SVG Spinners",
+            url: "https://github.com/n3r4zzurr0/svg-spinners",
+      },
+      {
+            id: 11,
+            label: "ASCII Flow - Text based image drawing",
+            url: "https://asciiflow.com/#/",
+      },
+      {
+            id: 12,
+            label: "REQRES Mock apis for testing",
+            url: "https://reqres.in/",
+      },
+      {
+            id: 13,
+            label: "Haikie - SVG background generator",
+            url: "https://app.haikei.app/",
+      },
+      {
+            id: 14,
+            label: "IP API",
+            url: "https://ipapi.is/",
+      },
+      {
+            id: 15,
+            label: "Rakko Tools",
+            url: "https://en.rakko.tools/",
+      },
+];
+
+function getHost(url) {
+      const parsedUrl = new URL(url);
+      let host = parsedUrl.host;
+      if (host.startsWith("www.")) {
+            host = host.substring(4);
+      }
+      return host;
+}
+
+function getThumbnail(url) {
+      const host = getHost(url);
+      return `https://logo.clearbit.com/${host}`;
+}
+</script>
+    

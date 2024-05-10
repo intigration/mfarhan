@@ -53,10 +53,25 @@ const items = [
     path: "/articles",
     icon: "solar:document-add-outline",
   },
+  {
+    name: "Cybersecurity",
+    path: "/cybersecurity",
+    icon: "solar:document-add-outline",
+  },
+  {
+    name: "Tools",
+    path: "/tools",
+    icon: "solar:document-add-outline",
+  },
+  {
+    name: "Skills",
+    path: "/skills",
+    icon: "solar:document-add-outline",
+  },
   { name: "Lab", path: "/lab", icon: "heroicons:beaker" },
   {
-    name: "What's in my bag?",
-    path: "/whats-in-my-bag",
+    name: "Technologies",
+    path: "/guru",
     icon: "solar:backpack-outline",
   },
   {
